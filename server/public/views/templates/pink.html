@@ -1,5 +1,9 @@
-<div class="container pink">
-  <h2>{{pink.title}}</h2>
-
-  <img class="mrImage" src="../images/mrPink.jpg" />
+<div  class="container pink">
+  <label ng-hide="name" for="nameChanger">Code Name</label>
+  <label ng-show="name" for="nameChanger">Real Name</label>
+  <input name="nameChanger"type="checkbox" ng-model="name">
+  <h2 ng-hide="name">{{pink.title}}</h2>
+  <h2 ng-show="name">{{pink.realName}}</h2>
+  <img class="mrImage" src="{{pink.image}}" />
+  <p>{{pink.bio}}</p>
 </div>
