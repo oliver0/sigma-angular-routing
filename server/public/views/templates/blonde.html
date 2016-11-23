@@ -6,4 +6,10 @@
   <h2 ng-show="name">{{blonde.realName}}</h2>
   <img class="mrImage" src="{{blonde.image}}" />
   <p>{{blonde.bio}}</p>
+  <label for="quote">Show Quote</label>
+  <input name="quote" type="checkbox" ng-model="showQuote" ng-init="showQuote = false">
+</div>
+
+<div ng-if="showQuote" class ="quotes">
+  <h4 >{{blonde.quote}} </h4>
 </div>
